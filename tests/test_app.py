@@ -308,42 +308,59 @@ class TestAPIInspections(unittest.TestCase):
         )
 
         self.sample_label_data = {
-            "cautions_en": ["string"],
-            "instructions_en": [],
-            "cautions_fr": ["string"],
-            "ingredients_en": [],
-            "manufacturer_address": "string",
-            "instructions_fr": [],
-            "manufacturer_phone_number": "string",
-            "density": {"value": 0, "unit": "string"},
-            "guaranteed_analysis_en": {
-                "title": "string",
-                "nutrients": [],
-                "is_minimal": True,
-            },
-            "ingredients_fr": [],
-            "npk": "string",
-            "guaranteed_analysis_fr": {
-                "title": "string",
-                "nutrients": [],
-                "is_minimal": True,
-            },
-            "company_name": "string",
-            "manufacturer_website": "string",
-            "registration_number": [
+            "organizations": [
                 {
-                    "identifier": "2224256A",
-                    "type": "fertilizer_product",
+                "name": "GreenGrow Inc.",
+                "address": "123 Green Road, Farmville, State, 12345",
+                "website": "https://www.greengrow.com",
+                "phone_number": "123-456-7890"
+                },
+                {
+                "name": "AgriSupply Co.",
+                "address": "456 Supply Lane, AgriTown, State, 67890",
+                "website": "https://www.agrisupply.com",
+                "phone_number": "987-654-3210"
                 }
             ],
-            "fertiliser_name": "string",
-            "company_address": "string",
-            "lot_number": "string",
-            "weight": [],
-            "manufacturer_name": "string",
-            "company_website": "string",
-            "volume": {"value": 0, "unit": "string"},
-            "company_phone_number": "string",
+            "fertiliser_name": "GreenGrow Fertilizer 20-20-20",
+            "registration_number": [
+                {
+                "identifier": "2018007A",
+                "type": "fertilizer_product"
+                }
+            ],
+            "lot_number": "LOT20240901",
+            "weight": [
+                {
+                "value": 50,
+                "unit": "kg"
+                }
+            ],
+            "density": {
+                "value": 1.5,
+                "unit": "g/cm³"
+            },
+            "volume": {
+                "value": 33.3,
+                "unit": "L"
+            },
+            "npk": "20-20-20",
+            "guaranteed_analysis_en": {
+                "title": "Guaranteed Analysis",
+                "nutrients": [
+                ]
+            },
+            "guaranteed_analysis_fr": {
+                "title": "Analyse Garantie",
+                "nutrients": [
+                ]
+            },
+            "ingredients_en":[],
+            "ingredients_fr":[],
+            "cautions_en": [],
+            "cautions_fr": [],
+            "instructions_en": [],
+            "instructions_fr": []
         }
         self.label_data_json = json.dumps(self.sample_label_data)
 
